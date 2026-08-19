@@ -1,4 +1,5 @@
 import os
+from datetime import date
 from dotenv import load_dotenv
 from anthropic import Anthropic
 
@@ -38,7 +39,7 @@ Here is real, live data about the repository:
 - Archived: {repo_info['archived']}
 - Stars: {repo_info['stars']}
 
-Today's date is 2026-08-17.
+Today's date is {date.today().isoformat()}.
 
 Compare the claims against the real data. Flag any contradictions clearly (e.g. "README claims X, but the data shows Y"). If nothing contradicts, say so plainly — don't invent a problem that isn't there.
 

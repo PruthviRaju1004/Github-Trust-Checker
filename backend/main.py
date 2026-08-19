@@ -6,7 +6,7 @@ from .qdrant_retriever import QdrantRetriever
 from .qa_agent import ask
 from .trust_agent import check_trust
 from .router import route
-from .build_prompt import contains_injection_attempt
+from .guardrails import contains_injection_attempt
 
 def handle(repo_url: str, message: str) -> str:
     owner, repo = parse_repo_url(repo_url)
@@ -31,3 +31,4 @@ def handle(repo_url: str, message: str) -> str:
 if __name__ == "__main__":
     print(handle("https://github.com/pallets/flask", "how do I run a basic flask app"))
     # print(handle("https://github.com/github/accessibilityjs", "is it actively maintained"))
+
