@@ -1,0 +1,26 @@
+[
+    {
+      "repo_url": "https://github.com/pallets/flask",
+      "question": "how do I run a basic flask app",
+      "expected_agent": "qa",
+      "expected_contains": "flask run"
+    },
+    {
+        "repo_url": "https://github.com/github/accessibilityjs",
+        "question": "is it actively maintained",
+        "expected_agent": "trust",
+        "expected_contains": "status: clear"
+      },
+      {
+        "repo_url": "https://github.com/github/accessibility-alt-text-bot",
+        "question": "why do i need this repo",
+        "expected_agent": "qa",
+        "expected_contains": "don't have enough information"
+      },
+      {
+        "repo_url": "https://github.com/github/ai-assessment-comment-labeler",
+        "question": "is it stable",
+        "expected_agent": "trust",
+        "expected_contains": "status: clear"
+      }
+  ]
