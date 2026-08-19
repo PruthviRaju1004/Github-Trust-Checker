@@ -16,7 +16,10 @@ def get_readme(owner: str, repo: str) -> str:
 def parse_repo_url(url: str) -> tuple[str, str]:
     """Turn 'https://github.com/owner/repo' into ('owner', 'repo')."""
     parts = url.rstrip("/").split("/")
-    return parts[-2], parts[-1]
+    owner, repo = parts[-2], parts[-1]
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+    return owner, repo
 
 def get_repo_info(owner: str, repo: str) -> dict:
     url = f"https://api.github.com/repos/{owner}/{repo}"

@@ -27,7 +27,6 @@ def handle(repo_url: str, message: str) -> str:
     else:
         repo_info = get_repo_info(owner, repo)
         return check_trust(readme, repo_info)
-        
 
 if __name__ == "__main__":
     print(handle("https://github.com/pallets/flask", "how do I run a basic flask app"))
